@@ -81,3 +81,54 @@
 	  });
 	});
 })(jQuery);
+
+
+$( document ).ready(function() {    
+    var areaprogress = new CircularProgress({
+      radius: 90,
+      strokeStyle: '#ffcc00',
+      lineCap: 'square',
+      lineWidth: 30,
+      initial: {
+        strokeStyle: '#d94a4d',
+        lineWidth: 30
+      },  
+      text: {
+          font: '27px Varela\ Round',
+          fillStyle: 'white',
+          shadowBlur: 0
+      },
+    });
+
+    $("#postalareas").append(areaprogress.el);        
+    
+    
+    var codeprogress = new CircularProgress({
+      radius: 90,
+      strokeStyle: '#ffcc00',
+      lineCap: 'square',
+      lineWidth: 30,
+      initial: {
+        strokeStyle: '#d94a4d',
+        lineWidth: 30
+      },          
+      text: {
+          font: '27px Varela\ Round',
+          fillStyle: 'white',
+          shadowBlur: 0
+      },
+    });
+
+    $("#postalcodes").append(codeprogress.el);    
+              
+    //get stats and update radial progressbars
+    url = "http://insamling.postnummeruppror.nu/api/0.0.4/statistics/server";
+    $.post( url, { func: "numberOfPostalCodes" }, function( data ) {
+        codeprogress.update(data.numberOfPostalCodes/16500);
+        areaprogress.update(data.numberOfPostalTowns/1707);
+        
+        $("#areaperc").text(data.numberOfPostalTowns/1707);
+        $("#codeperc").text(data.numberOfPostalCodes/16500);
+}, "json");
+    
+});
