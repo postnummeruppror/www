@@ -124,11 +124,15 @@ $( document ).ready(function() {
     //get stats and update radial progressbars
     url = "http://insamling.postnummeruppror.nu/api/0.0.4/statistics/server";
     $.post( url, { func: "numberOfPostalCodes" }, function( data ) {
-        codeprogress.update(data.numberOfPostalCodes/16500);
-        areaprogress.update(data.numberOfPostalTowns/1707);
+
+        var percentPostalCodes = Math.round(100 * (data.numberOfPostalCodes/16500));
+        var percentPostalTowns = Math.round(100 * (data.numberOfPostalTowns/1707));
+
+        codeprogress.update(percentPostalCodes);
+        areaprogress.update(percentPostalTowns);
         
-        $("#areaperc").text(data.numberOfPostalTowns/1707);
-        $("#codeperc").text(data.numberOfPostalCodes/16500);
+        $("#areaperc").text(percentPostalTowns);
+        $("#codeperc").text(percentPostalCodes);
 }, "json");
     
 });
