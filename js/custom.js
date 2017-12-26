@@ -122,7 +122,7 @@ $( document ).ready(function() {
     $("#postalcodes").append(codeprogress.el);    
               
     //get stats and update radial progressbars
-    url = "http://insamling.postnummeruppror.nu/api/0.0.4/statistics/server";
+    url = "//insamling.postnummeruppror.nu/api/0.0.4/statistics/server";
     $.post( url, { func: "numberOfPostalCodes" }, function( data ) {
 
         var percentPostalCodes = Math.round(100 * (data.numberOfPostalCodes/16500));
