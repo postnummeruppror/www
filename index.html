@@ -99,6 +99,119 @@
   <script src="js/html5shiv.js"></script>
   <script src="js/respond.min.js"></script>
   <![endif]-->
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org/",
+  "@type":"Dataset",
+  "name":"Postnummeruppror.nu dataset med svenska postnummer",
+  "description":"Datasetet innehåller crowdsourcade postnummerdata för Sverige. Eftersom inte postnummerdata från officiell källa finns som öppna data är 
+  detta dataset crowd-sourcat med hjälp av frivilliga initiativ. I de fall det funnits fritt licensierade delmängder har dessa inkluderats.",
+  "url":"https://postnummeruppror.nu/#data",
+  "identifier": ["https://doi.org/10.7910/DVN/X8CZPK"],
+  "keywords":[
+     "geodata",
+     "postnummer",
+     "adresser",
+  ],
+  "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+  "hasPart" : [
+    {
+      "@type": "Dataset",
+      "name": "Postnummer och postort",
+      "description": "Textfil med alla insalade postnummer och postorter.",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+        "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"text/plain",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postnummer_postort.utf8.txt"
+        }]
+    },
+    {
+      "@type": "Dataset",
+      "name": "Postorter geometri",
+      "description": "Beräknade geometriska ytor för postorter i GeoJSON-format",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"application/geo+json",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postort_polygons.geo.json"
+        }]
+    },
+    {
+      "@type": "Dataset",
+      "name": "Polygoner i GeoJSON-format för postnummer på ensiffernivå",
+      "description": "Beräknade geometriska ytor för postnummerområden på ensiffernivå i GeoJSON-format",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"application/geo+json",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postnummer_polygons_1.geo.json"
+        }]
+    },
+        {
+      "@type": "Dataset",
+      "name": "Polygoner i GeoJSON-format för postnummer på tvåsiffernivå",
+      "description": "Beräknade geometriska ytor för postnummerområden på tvåsiffernivå i GeoJSON-format",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"application/geo+json",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postnummer_polygons_2.geo.json"
+        }]
+    },
+        {
+      "@type": "Dataset",
+      "name": "Polygoner i GeoJSON-format för postnummer på tresiffernivå",
+      "description": "Beräknade geometriska ytor för postnummerområden på tresiffernivå i GeoJSON-format",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"application/geo+json",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postnummer_polygons_3.geo.json"
+        }]
+    },
+        {
+      "@type": "Dataset",
+      "name": "Polygoner i GeoJSON-format för postnummer på fyrsiffernivå",
+      "description": "Beräknade geometriska ytor för postnummerområden på fyrsiffernivå i GeoJSON-format",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"application/geo+json",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postnummer_polygons_4.geo.json"
+        }]
+    },
+        {
+      "@type": "Dataset",
+      "name": "Polygoner i GeoJSON-format för postnummer på femsiffernivå",
+      "description": "Beräknade geometriska ytor för postnummerområden på femsiffernivå i GeoJSON-format",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"application/geo+json",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postnummer_polygons_5.geo.json"
+        }]
+    }
+  ],
+  "creator":{
+     "@type":"Organization",
+     "url": "https://postnummeruppror.nu/",
+     "name":"Postnummeruppror.nu",
+     "contactPoint":{
+        "@type":"ContactPoint",
+        "contactType": "Upprorskommittén",
+        "email":"postnummeruppror@gmail.com"
+     }
+  },
+}
+</script>
 
 </head>
 <body>
@@ -113,6 +226,7 @@
             <li><a href="#vill">Vad vi vill</a></li>
             <li><a href="#help">Hjälp oss</a></li>
             <li><a href="#status">Hur går det?</a></li>
+            <li><a href="#data">Använd data</a></li>
           </ul>
         </nav>
       </div>
@@ -147,7 +261,7 @@
               Det är ett pris som utesluter de flesta från att utveckla nya och förbättrade tjänster.</p>
 
             <p>I Danmark räknade man på <a
-                href="http://www.uli.se/nyheter/33-internationellt/295-pm-nyttan-av-fria-adressdata-i-danmark">samhällsnyttan
+                href="https://web.archive.org/web/20160205010212/http://www.uli.se/nyheter/33-internationellt/295-pm-nyttan-av-fria-adressdata-i-danmark">samhällsnyttan
               av fria adressdata</a> och kom fram till att den tidigare affärsmodellen var förlegad. Det finns goda skäl
               att anta att samma nyttor skulle uppstå i Sverige.</p>
           </div>
@@ -336,7 +450,7 @@
                   <a href="http://insamling.postnummeruppror.nu/map/postnummer/5/2016-03-13_23:59.html"
                      data-fancybox-group="group1" class="fancybox">
                     <span>5-sifferpostnummer 2016-03-13</span>
-                    <img src="images/20160313/postnummer-5.jpeg" width="494" height="874" alt="5-sifferpostnummer 2016-03-13"
+                    <img src="images/20140929/postnummer-5.jpeg" width="494" height="874" alt="5-sifferpostnummer 2016-03-13"
                          draggable="false">
                   </a>
                 </div>
@@ -358,6 +472,21 @@
             <li><a class="flex-next" href="#">Next</a></li>
           </ul>
         </div>
+      </div>
+    </section>
+
+
+    <section id="data" class="section with-arrow">
+      <div class="section-header">
+        <h1>Använd våra data</h1>
+      </div>
+      <div class="section-content section-no-top-padding">
+        <div class="container">
+          <div class="col-md-6">
+            <p>Vill du använda postnummerdata vi samlat in? Här hittar du våra dataset med postnummerdata. Informationen i dataseten uppdateras varje natt.</p>
+            <p><a href="//insamling.postnummeruppror.nu/nightly/" class="btn">Hämta data</a></p>
+          </div>
+         </div>
       </div>
     </section>
 

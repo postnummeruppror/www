@@ -93,7 +93,118 @@
   <script src="js/html5shiv.js"></script>
   <script src="js/respond.min.js"></script>
   <![endif]-->
-
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org/",
+  "@type":"Dataset",
+  "name":"Postnummeruppror.nu Swedish post code dataset",
+  "description":"Crowd sourced post code data for Sweden. No official open dataset exists for post codes in Sweden.",
+  "url":"https://postnummeruppror.nu/#data",
+  "identifier": ["https://doi.org/10.7910/DVN/X8CZPK"],
+  "keywords":[
+     "geodata",
+     "postnummer",
+     "adresser",
+  ],
+  "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+  "hasPart" : [
+    {
+      "@type": "Dataset",
+      "name": "Post code and area name",
+      "description": "Text file containing all collected post codes and area names.",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+        "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"text/plain",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postnummer_postort.utf8.txt"
+        }]
+    },
+    {
+      "@type": "Dataset",
+      "name": "Post area geometries",
+      "description": "Computed/estimated polygons of post areas in GeoJSON format",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"application/geo+json",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postort_polygons.geo.json"
+        }]
+    },
+    {
+      "@type": "Dataset",
+      "name": "Polygons in GeoJSON-format for first digit post codes",
+      "description": "Computed polygons for first digit post code areas in GeoJSON format",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"application/geo+json",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postnummer_polygons_1.geo.json"
+        }]
+    },
+        {
+      "@type": "Dataset",
+      "name": "Polygons in GeoJSON-format for two-digit post codes",
+      "description": "Computed polygons for two-digit post code areas in GeoJSON format",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"application/geo+json",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postnummer_polygons_2.geo.json"
+        }]
+    },
+        {
+      "@type": "Dataset",
+      "name": "Polygons in GeoJSON-format for 3-digit post codes",
+      "description": "Computed polygons for 3-digit post code areas in GeoJSON format",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"application/geo+json",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postnummer_polygons_3.geo.json"
+        }]
+    },
+        {
+      "@type": "Dataset",
+      "name": "Polygons in GeoJSON-format for 4-digit post codes",
+      "description": "Computed polygons for 4-digit post code areas in GeoJSON format",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"application/geo+json",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postnummer_polygons_4.geo.json"
+        }]
+    },
+        {
+      "@type": "Dataset",
+      "name": "Polygons in GeoJSON-format for 5-digit post codes",
+      "description": "Computed polygons for 5-digit post code areas in GeoJSON format",
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "distribution":[
+        {
+          "@type":"DataDownload",
+          "encodingFormat":"application/geo+json",
+          "contentUrl":"http://insamling.postnummeruppror.nu/nightly/postnummer_polygons_5.geo.json"
+        }]
+    }
+  ],
+  "creator":{
+     "@type":"Organization",
+     "url": "https://postnummeruppror.nu/",
+     "name":"Postnummeruppror.nu",
+     "contactPoint":{
+        "@type":"ContactPoint",
+        "contactType": "Upprorskommittén",
+        "email":"postnummeruppror@gmail.com"
+     }
+  },
+}
+</script>
 </head>
 <body>
 <div id="page">
@@ -315,7 +426,7 @@
                   <a href="http://insamling.postnummeruppror.nu/map/postnummer/5/2016-03-13_23:59.html"
                      data-fancybox-group="group1" class="fancybox">
                     <span>5-sifferpostnummer 2016-03-13</span>
-                    <img src="images/20160313/postnummer-5.jpeg" width="494" height="874" alt="5-sifferpostnummer 2016-03-13"
+                    <img src="images/20140929/postnummer-5.jpeg" width="494" height="874" alt="5-sifferpostnummer 2016-03-13"
                          draggable="false">
                   </a>
                 </div>
